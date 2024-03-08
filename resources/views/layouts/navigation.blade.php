@@ -82,7 +82,21 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            @if(Auth::user()->usertype==='user')
+            {{-- Code Here for user --}}
+        @else
+        <!--Admin-->
+            <x-responsive-nav-link :href="route('punta')" :active="request()->routeIs('punta')">
+                {{ __('Punta') }}
+            </x-responsive-nav-link>
+
+        
+        @endif
+               
         </div>
+
+
+       
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">

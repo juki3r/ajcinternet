@@ -16,6 +16,16 @@
                     
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
+                            {{ __('Poblacion, Luyo') }}
+                        </x-dropdown-link>
+                    </x-slot>
+                    <x-slot name="content">
+                        <x-dropdown-link >
+                            {{ __('Isla') }}
+                        </x-dropdown-link>
+                    </x-slot>
+                    <x-slot name="content">
+                        <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Isla') }}
                         </x-dropdown-link>
                     </x-slot>

@@ -16,7 +16,7 @@
                     
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
+                            {{ __('Isla') }}
                         </x-dropdown-link>
                     </x-slot>
                 </x-dropdown>

@@ -4,6 +4,7 @@ use App\Http\Controllers\Clients;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PuntaController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LuyoPoblacionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,9 @@ Route::middleware(['auth', 'verified'])->group(function() {
     Route::put('punta/updatepuntaclient/{id}', [PuntaController::class, 'puntaupdateclient'])->name('puntaupdateclient');
     Route::get('punta/editbillpuntaclient/{id}', [PuntaController::class, 'EditBillClient'])->name('EditBillClient');
     Route::put('punta/updatebillclient/{id}', [PuntaController::class, 'updatebill'])->name('updatebill');
+
+    //Luyo Poblacion Carles
+    Route::get('luyo', [LuyoPoblacionController::class, 'luyo'])->name('luyo'); 
 
 
 });

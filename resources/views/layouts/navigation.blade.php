@@ -89,6 +89,9 @@
             <x-responsive-nav-link :href="route('punta')" :active="request()->routeIs('punta')">
                 {{ __('Punta') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('luyo')" :active="request()->routeIs('luyo')">
+                {{ __('Luyo Poblacion, Carles') }}
+            </x-responsive-nav-link>
 
         
         @endif

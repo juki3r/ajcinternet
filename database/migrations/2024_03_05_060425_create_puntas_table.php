@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('fullname');
             $table->string('address')->default('Punta, Carles');
-            $table->string('contact');
+            $table->string('contact')->nullable();;
             $table->integer('plan');
             $table->integer('duedate');
             $table->integer('january')->nullable();

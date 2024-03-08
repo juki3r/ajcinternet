@@ -45,10 +45,9 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive-sm mt-2">
-                                <table class="table table-striped table-bordered table-hover table-sm text-nowrap text-center" id="sortTable">
+                                <table class="table table-striped table-bordered table-hover table-sm text-nowrap text-center bg-info" id="sortTable">
                                     <thead >
                                         <tr>
-                                            <th>ID</th>
                                             <th>Name</th>
                                             <th>Address</th>
                                             <th>Contact</th>
@@ -60,12 +59,29 @@
                                     <tbody >
                                         @foreach($puntadata as $puntadata)
                                             <tr>
-                                                <td style="text-transform: capitalize">{{$puntadata->id}}</td>
-                                                <td style="text-transform: capitalize">{{$puntadata->fullname}}</td>
+                                                <td style="text-transform: capitalize" >
+                                                    @if(date('d') == $puntadata->duedate)
+                                                        <span class="text-danger">{{$puntadata->fullname}}</span>
+                                                    @else 
+                                                        <span >{{$puntadata->fullname}}</span>
+                                                    @endif
+                                                </td>
                                                 <td style="text-transform: capitalize">{{$puntadata->address}}</td>
-                                                <td style="text-transform: capitalize">{{$puntadata->contact}}</td>
-                                                <td >{{$puntadata->plan}}</td>
-                                                <td >{{$puntadata->duedate}}</td>
+                                                <td style="text-transform: capitalize">
+                                                    @if($puntadata->contact === null)
+                                                        Empty
+                                                    @else 
+                                                        {{$puntadata->contact}}
+                                                    @endif
+                                                </td>
+                                                <td >&#8369;{{$puntadata->plan}}.00</td>
+                                                <td >
+                                                    @if(date('d') == $puntadata->duedate)
+                                                        <span class="text-danger">{{$puntadata->duedate}}</span>
+                                                    @else 
+                                                        <span >{{$puntadata->duedate}}</span>
+                                                    @endif
+                                                </td>
                                                 <td>
                                                     <a href="{{route('clientbill', [$puntadata->id])}}" class="btn btn-primary btn-sm mx-1">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
@@ -89,7 +105,6 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-                                
                                
                             </div>
                         </div>

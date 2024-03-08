@@ -28,7 +28,9 @@ Route::middleware(['auth', 'verified'])->group(function() {
     Route::get('punta/{id}/delete', [PuntaController::class, 'deletepuntaclient'])->name('deletepuntaclient');
     Route::get('punta/{id}', [PuntaController::class, 'clientbill'])->name('clientbill');
     Route::get('punta/editpuntaclient/{id}', [PuntaController::class, 'editpuntaclient'])->name('editpuntaclient');
-    Route::put('punta/updatepuntaclient', [PuntaController::class, 'puntaupdateclient'])->name('puntaupdateclient');
+    Route::put('punta/updatepuntaclient/{id}', [PuntaController::class, 'puntaupdateclient'])->name('puntaupdateclient');
+    Route::get('punta/editbillpuntaclient/{id}', [PuntaController::class, 'EditBillClient'])->name('EditBillClient');
+    Route::put('punta/updatebillclient/{id}', [PuntaController::class, 'updatebill'])->name('updatebill');
 
 
 });

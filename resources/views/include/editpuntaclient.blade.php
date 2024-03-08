@@ -19,7 +19,7 @@
                             </h4>
                             </div>
                             <div class="card-body">
-                                <form action="{{route('addpuntaclientproceed')}}" method="POST">
+                                <form action="{{url('punta/updatepuntaclient/'.$PuntaClientData->id.'')}}" method="POST">
                                     @csrf
                                     @method('PUT')
                                     <div>

@@ -29,7 +29,7 @@
                                     </div>
                                     <div>
                                         <x-input-label for="contact" :value="__('Contact')" />
-                                        <x-text-input  class="block mt-1 w-full" type="number" name="contact" required autofocus />
+                                        <x-text-input  class="block mt-1 w-full" type="number" name="contact"  autofocus />
                                         <x-input-error :messages="$errors->get('contact')" class="mt-2" />
                                     </div>
                                     <div>

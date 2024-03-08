@@ -24,7 +24,7 @@ class PuntaController extends Controller
     {   
         $request->validate([
             'fullname' => 'required|unique:puntas',
-            'contact' => 'required|min:11|unique:puntas',
+            'contact' => 'nullable',
             'plan' => 'required|min:3',
             'duedate' => 'required|min:1|max:2'
         ]);
@@ -63,15 +63,9 @@ class PuntaController extends Controller
         $PuntaClientData = Punta::findOrFail($id);
         return view('include.editpuntaclient', compact('PuntaClientData'));
     }
-
+    //Update Client
     public function puntaupdateclient (Request $request, int $id)
     {
-        $request->validate([
-            'fullname' => 'required',
-            'contact' => 'required',
-            'plan' => 'required',
-            'duedate' => 'required'
-        ]);
         Punta::findOrFail($id)->update([
             'fullname' => $request->fullname,
             'contact' => $request->contact,
@@ -79,5 +73,32 @@ class PuntaController extends Controller
             'duedate' => $request->duedate
         ]);
         return redirect()->back()->with('status', 'Client Updated');
+    }
+
+    // View bill
+    public function EditBillClient (int $id)
+    {
+        $clientbilledit = Punta::findOrFail($id);
+        return view('include.clientbilledit', compact('clientbilledit'));
+    }
+    public function updatebill (Request $request, int $id)
+    {
+        Punta::findOrFail($id)->update([
+            'january' => $request->january,
+            'febuary' => $request->febuary,
+            'march' => $request->march,
+            'april' => $request->april,
+            'may' => $request->may,
+            'june' => $request->june,
+            'july' => $request->july,
+            'august' => $request->august,
+            'september' => $request->september,
+            'october' => $request->october,
+            'november' => $request->november,
+            'december' => $request->december,
+        ]);
+        return redirect()->back()->with('status', 'Client Bill Updated');
+        
+       
     }
 }

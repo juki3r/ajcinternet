@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('luyo_poblacions', function (Blueprint $table) {
             $table->id();
             $table->string('fullname');
-            $table->string('address')->default('Punta, Carles');
+            $table->string('address')->default('Luyo Poblacion, Carles');
             $table->string('contact')->nullable();;
             $table->integer('plan');
             $table->integer('duedate');

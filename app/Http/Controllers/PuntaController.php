@@ -10,17 +10,17 @@ class PuntaController extends Controller
 {
     public function punta ()
     {   
-        $puntadata = Punta::get();
-        return view('include.punta', ['puntadata' => $puntadata]);
+        $data = Punta::get();
+        return view('include.punta', ['data' => $data]);
         
     }
-    //Add Punta Client
-    public function addpuntaclient ()
+    //Add Client
+    public function AddClient ()
     {   
         return view('include.puntaaddclient');
     }
     //Proceed add client
-    public function addpuntaclientproceed (Request $request)
+    public function AddClientProceed (Request $request)
     {   
         $request->validate([
             'fullname' => 'required|unique:puntas',
@@ -41,7 +41,7 @@ class PuntaController extends Controller
     }
 
     //Delete Client
-    public function deletepuntaclient ($id)
+    public function deleteclient ($id)
     {
         $search = $id;
         $client = Punta::where('id', 'like', "%$search%");
@@ -58,14 +58,20 @@ class PuntaController extends Controller
     }
 
     // edit Punta Client
-    public function editpuntaclient (int $id)
+    public function Editclient (int $id)
     {
-        $PuntaClientData = Punta::findOrFail($id);
-        return view('include.editpuntaclient', compact('PuntaClientData'));
+        $data = Punta::findOrFail($id);
+        return view('include.editpuntaclient', compact('data'));
     }
     //Update Client
-    public function puntaupdateclient (Request $request, int $id)
+    public function updateclient (Request $request, int $id)
     {
+        $request->validate([
+            'fullname' => 'unique:puntas',
+            'contact' => 'nullable',
+            'plan' => 'min:3',
+            'duedate' => 'min:1|max:2'
+        ]);
         Punta::findOrFail($id)->update([
             'fullname' => $request->fullname,
             'contact' => $request->contact,

@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Punta Clients') }}
+            {{ __('Luyo Poblacion Clients') }}
         </h2>
     </x-slot>
 
@@ -15,11 +15,11 @@
                         <div class="card">
                             <div class="card-header">
                             <h4>Add Client
-                                <a href="{{route('punta')}}" class="btn btn-primary float-end">Back</a>
+                                <a href="{{route('luyo')}}" class="btn btn-primary float-end">Back</a>
                             </h4>
                             </div>
                             <div class="card-body">
-                                <form action="{{route('AddPuntaClientProceed')}}" method="POST">
+                                <form action="{{route('AddLuyoClientProceed')}}" method="POST">
                                     @csrf
                                     @method('PUT')
                                     <div>
@@ -56,3 +56,4 @@
 
 
 </x-app-layout>
+

@@ -24,17 +24,25 @@ Route::get('/', function () {
 Route::middleware(['auth', 'verified'])->group(function() {
     //Punta Route
     Route::get('punta', [PuntaController::class, 'punta'])->name('punta'); 
-    Route::get('punta/addpuntaclient', [PuntaController::class, 'addpuntaclient'])->name('addpuntaclient');
-    Route::put('punta/addpuntaclient', [PuntaController::class, 'addpuntaclientproceed'])->name('addpuntaclientproceed');
-    Route::get('punta/{id}/delete', [PuntaController::class, 'deletepuntaclient'])->name('deletepuntaclient');
+    Route::get('punta/addpuntaclient', [PuntaController::class, 'AddClient'])->name('AddPuntaClient');
+    Route::put('punta/addpuntaclient', [PuntaController::class, 'AddClientProceed'])->name('AddPuntaClientProceed');
+    Route::get('punta/{id}/delete', [PuntaController::class, 'deleteclient'])->name('deletepuntaclient');
     Route::get('punta/{id}', [PuntaController::class, 'clientbill'])->name('clientbill');
-    Route::get('punta/editpuntaclient/{id}', [PuntaController::class, 'editpuntaclient'])->name('editpuntaclient');
-    Route::put('punta/updatepuntaclient/{id}', [PuntaController::class, 'puntaupdateclient'])->name('puntaupdateclient');
+    Route::get('punta/editpuntaclient/{id}', [PuntaController::class, 'Editclient'])->name('EditPuntaClient');
+    Route::put('punta/updatepuntaclient/{id}', [PuntaController::class, 'updateclient'])->name('updatepuntaclient');
     Route::get('punta/editbillpuntaclient/{id}', [PuntaController::class, 'EditBillClient'])->name('EditBillClient');
     Route::put('punta/updatebillclient/{id}', [PuntaController::class, 'updatebill'])->name('updatebill');
 
     //Luyo Poblacion Carles
     Route::get('luyo', [LuyoPoblacionController::class, 'luyo'])->name('luyo'); 
+    Route::get('luyo/addluyoclient', [LuyoPoblacionController::class, 'AddClient'])->name('AddLuyoClient');
+    Route::put('luyo/addluyoclient', [LuyoPoblacionController::class, 'AddClientProceed'])->name('AddLuyoClientProceed');
+    Route::get('luyo/{id}/delete', [LuyoPoblacionController::class, 'deleteclient'])->name('deleteluyoclient');
+    Route::get('luyo/{id}', [LuyoPoblacionController::class, 'clientbill'])->name('clientbillluyo');
+    Route::get('luyo/editluyoclient/{id}', [LuyoPoblacionController::class, 'Editclient'])->name('EditLuyoClient');
+    Route::put('luyo/updateluyoclient/{id}', [LuyoPoblacionController::class, 'updateclient'])->name('updateluyoclient');
+    Route::get('luyo/editbillluyoclient/{id}', [LuyoPoblacionController::class, 'EditBillClient'])->name('EditBillClientLuyo');
+    Route::put('luyo/updatebillclient/{id}', [LuyoPoblacionController::class, 'updatebill']);
 
 
 });

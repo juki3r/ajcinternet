@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Update {{ $PuntaClientData->fullname }}
+            Update {{ $data->fullname }}
         </h2>
     </x-slot>
 
@@ -19,27 +19,27 @@
                             </h4>
                             </div>
                             <div class="card-body">
-                                <form action="{{url('punta/updatepuntaclient/'.$PuntaClientData->id.'')}}" method="POST">
+                                <form action="{{route('updatepuntaclient',[$data->id])}}" method="POST">
                                     @csrf
                                     @method('PUT')
                                     <div>
                                         <x-input-label for="fullname" :value="__('Fullname')" />
-                                        <x-text-input  class="block mt-1 w-full" type="text" name="fullname" value="{{$PuntaClientData->fullname}}" required autofocus  style="text-transform: capitalize"/>
+                                        <x-text-input  class="block mt-1 w-full" type="text" name="fullname" value="{{$data->fullname}}"  autofocus  style="text-transform: capitalize"/>
                                         <x-input-error :messages="$errors->get('fullname')" class="mt-2" />
                                     </div>
                                     <div>
                                         <x-input-label for="contact" :value="__('Contact')" />
-                                        <x-text-input  class="block mt-1 w-full" type="number" name="contact" value="{{$PuntaClientData->contact}}" required autofocus />
+                                        <x-text-input  class="block mt-1 w-full" type="number" name="contact" value="{{$data->contact}}" autofocus />
                                         <x-input-error :messages="$errors->get('contact')" class="mt-2" />
                                     </div>
                                     <div>
                                         <x-input-label for="plan" :value="__('Plan')" />
-                                        <x-text-input  class="block mt-1 w-full" type="number" name="plan" value="{{$PuntaClientData->plan}}" required autofocus />
+                                        <x-text-input  class="block mt-1 w-full" type="number" name="plan" value="{{$data->plan}}"  autofocus />
                                         <x-input-error :messages="$errors->get('plan')" class="mt-2" />
                                     </div>
                                     <div>
                                         <x-input-label for="duedate" :value="__('Duedate Every')" />
-                                        <x-text-input  class="block mt-1 w-full" type="number" name="duedate" value="{{$PuntaClientData->duedate}}" required autofocus />
+                                        <x-text-input  class="block mt-1 w-full" type="number" name="duedate" value="{{$data->duedate}}"  autofocus />
                                         <x-input-error :messages="$errors->get('duedate')" class="mt-2" />
                                     </div>
                                     <x-primary-button class="my-2">

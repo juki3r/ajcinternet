@@ -56,4 +56,28 @@ class PuntaController extends Controller
         $clientbill = Punta::findOrFail($id);
         return view('include.clientbill', compact('clientbill'));
     }
+
+    // edit Punta Client
+    public function editpuntaclient (int $id)
+    {
+        $PuntaClientData = Punta::findOrFail($id);
+        return view('include.editpuntaclient', compact('PuntaClientData'));
+    }
+
+    public function puntaupdateclient (Request $request, int $id)
+    {
+        $request->validate([
+            'fullname' => 'required',
+            'contact' => 'required',
+            'plan' => 'required',
+            'duedate' => 'required'
+        ]);
+        Punta::findOrFail($id)->update([
+            'fullname' => $request->fullname,
+            'contact' => $request->contact,
+            'plan' => $request->plan,
+            'duedate' => $request->duedate
+        ]);
+        return redirect()->back()->with('status', 'Client Updated');
+    }
 }

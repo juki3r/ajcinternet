@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Punta Clients') }}
+            Update {{ $PuntaClientData->fullname }}
         </h2>
     </x-slot>
 
@@ -14,7 +14,7 @@
                     @endif
                         <div class="card">
                             <div class="card-header">
-                            <h4>Add Client
+                            <h4>Update Client
                                 <a href="{{route('punta')}}" class="btn btn-primary float-end">Back</a>
                             </h4>
                             </div>
@@ -24,26 +24,26 @@
                                     @method('PUT')
                                     <div>
                                         <x-input-label for="fullname" :value="__('Fullname')" />
-                                        <x-text-input  class="block mt-1 w-full" type="text" name="fullname" required autofocus  style="text-transform: capitalize"/>
+                                        <x-text-input  class="block mt-1 w-full" type="text" name="fullname" value="{{$PuntaClientData->fullname}}" required autofocus  style="text-transform: capitalize"/>
                                         <x-input-error :messages="$errors->get('fullname')" class="mt-2" />
                                     </div>
                                     <div>
                                         <x-input-label for="contact" :value="__('Contact')" />
-                                        <x-text-input  class="block mt-1 w-full" type="number" name="contact" required autofocus />
+                                        <x-text-input  class="block mt-1 w-full" type="number" name="contact" value="{{$PuntaClientData->contact}}" required autofocus />
                                         <x-input-error :messages="$errors->get('contact')" class="mt-2" />
                                     </div>
                                     <div>
                                         <x-input-label for="plan" :value="__('Plan')" />
-                                        <x-text-input  class="block mt-1 w-full" type="number" name="plan" required autofocus />
+                                        <x-text-input  class="block mt-1 w-full" type="number" name="plan" value="{{$PuntaClientData->plan}}" required autofocus />
                                         <x-input-error :messages="$errors->get('plan')" class="mt-2" />
                                     </div>
                                     <div>
                                         <x-input-label for="duedate" :value="__('Duedate Every')" />
-                                        <x-text-input  class="block mt-1 w-full" type="number" name="duedate" required autofocus />
+                                        <x-text-input  class="block mt-1 w-full" type="number" name="duedate" value="{{$PuntaClientData->duedate}}" required autofocus />
                                         <x-input-error :messages="$errors->get('duedate')" class="mt-2" />
                                     </div>
                                     <x-primary-button class="my-2">
-                                        {{ __('Add') }}
+                                        {{ __('Update') }}
                                     </x-primary-button>
                                 </form>
                             </div>
@@ -52,25 +52,4 @@
             </div>
         </div>
     </div>
-    
-
-
 </x-app-layout>
-
-{{-- <form action="" method="POST">
-    @csrf
-    @method('PUT')
-        <div class="mb-3">
-            <label>Fullname</label>
-            <input type="text" class="form-control" name="fullname" style="text-transform: capitalize" />
-            @error('fullname') <span class="text-danger">{{$message}}</span>@enderror
-        </div>
-        <div class="mb-3">
-            <label>Contact</label>
-            <input  class="form-control" name="contact"  />
-            @error('contact') <span class="text-danger">{{$message}}</span>@enderror
-        </div>
-        <div class="mb-3">
-            <button class="btn btn-success">Update</button>
-        </div>
-    </form> --}}

@@ -1,37 +1,30 @@
 <x-app-layout>
     <x-slot name="header" class="flex">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight ">
-            <div class="hidden sm:flex sm:items-center sm:ms-6">
-                <x-dropdown align="right" width="48">
-                    <x-slot name="trigger">
-                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                            Punta, Carles
-                            <div class="ms-1">
-                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                </svg>
-                            </div>
-                        </button>
-                    </x-slot>
-                    
-                    <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Poblacion, Luyo') }}
-                        </x-dropdown-link>
-                    </x-slot>
-                    <x-slot name="content">
-                        <x-dropdown-link >
-                            {{ __('Isla') }}
-                        </x-dropdown-link>
-                    </x-slot>
-                    <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Isla') }}
-                        </x-dropdown-link>
-                    </x-slot>
-                </x-dropdown>
-            </div>
-        </h2>
+        <div class="hidden sm:flex sm:items-center sm:ms-6">
+            <x-dropdown align="right" width="48">
+                <x-slot name="trigger">
+                    <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                        <div>Punta, Carles</div>
+
+                        <div class="ms-1">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </button>
+                </x-slot>
+
+                <x-slot name="content">
+                    <x-dropdown-link :href="route('profile.edit')">
+                        {{ __('Punta, Carles') }}
+                    </x-dropdown-link>
+                    <x-dropdown-link :href="route('profile.edit')">
+                        {{ __('Luyo Poblacion, Carles') }}
+                    </x-dropdown-link>
+                
+                </x-slot>
+            </x-dropdown>
+        </div>
         
     </x-slot>
 
@@ -52,12 +45,13 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive-sm mt-2">
-                                <table class="table table-striped table-bordered table-hover table-sm text-nowrap text-center">
+                                <table class="table table-striped table-bordered table-hover table-sm text-nowrap text-center" id="sortTable">
                                     <thead >
                                         <tr>
                                             <th>ID</th>
                                             <th>Name</th>
                                             <th>Address</th>
+                                            <th>Contact</th>
                                             <th>Plan</th>
                                             <th>Due Every</th>
                                             <th>Action</th>
@@ -69,6 +63,7 @@
                                                 <td style="text-transform: capitalize">{{$puntadata->id}}</td>
                                                 <td style="text-transform: capitalize">{{$puntadata->fullname}}</td>
                                                 <td style="text-transform: capitalize">{{$puntadata->address}}</td>
+                                                <td style="text-transform: capitalize">{{$puntadata->contact}}</td>
                                                 <td >{{$puntadata->plan}}</td>
                                                 <td >{{$puntadata->duedate}}</td>
                                                 <td>
@@ -77,7 +72,7 @@
                                                             <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"/>
                                                         </svg>
                                                     </a> 
-                                                    <a href="" 
+                                                    <a href="{{route('editpuntaclient' , [$puntadata->id])}}" 
                                                     class="btn btn-success edit mx-1 btn-sm">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                                                             <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
@@ -94,6 +89,8 @@
                                         @endforeach
                                     </tbody>
                                 </table>
+                                
+                               
                             </div>
                         </div>
                     </div>
@@ -102,6 +99,7 @@
         </div>
     </div>
     
-
+  
+    
 
 </x-app-layout>

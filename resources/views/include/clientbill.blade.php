@@ -14,9 +14,9 @@
                             @if(session('status'))
                                 <div class="alert alert-success">{{session('status')}}</div>
                             @endif
-                            <h4 class="my-2">
+                            <h4 class="my-2 " style="text-transform: capitalize">
+                                {{ $clientbill->fullname . ' Bill' }}
                                 <a href="{{route('punta')}}" class="btn btn-primary float-end my-1 me-1 btn-sm">Back</a>
-                                <a href="{{route('addpuntaclient')}}" class="btn btn-success float-end mx-1 my-1 btn-sm">Add</a>
                             </h4>
                         </div>
                         <div class="card-body">
@@ -72,6 +72,7 @@
             </div>
         </div>
     </div>
+    
     
 
 

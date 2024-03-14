@@ -19,7 +19,7 @@ class DashboardController extends Controller
 
     public function remanearning ()
     {
-        $remanplan = IslaSur::get('plan');
+        $remanplan = IslaSur::get('january');
         // return view('investores.remanedem')
 
         echo count($remanplan);

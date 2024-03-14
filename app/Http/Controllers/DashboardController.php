@@ -16,4 +16,12 @@ class DashboardController extends Controller
             return view('investors.remanedem', ['islasurdata' => $islasurdata]);
         }
     }
+
+    public function remanearning ()
+    {
+        $remanplan = IslaSur::get('plan');
+        // return view('investores.remanedem')
+
+        echo $remanplan;
+    }
 }

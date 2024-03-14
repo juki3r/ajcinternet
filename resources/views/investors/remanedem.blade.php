@@ -57,7 +57,7 @@
                                     <h1>January</h1>
                                 </div>
                                 <div class="card-body">
-                                    <table>
+                                    <table class="table table-bordered">
                                         <tr>
                                             <td>Number of clients</td>
                                             <td><strong>{{ $januarynumberofclients }}</strong></td>
@@ -89,7 +89,7 @@
                                     <h1>Febuary</h1>
                                 </div>
                                 <div class="card-body">
-                                    <table>
+                                    <table class="table table-bordered">
                                         <tr>
                                             <td>Number of clients</td>
                                             <td><strong>{{ $febuarynumberofclients }}</strong></td>

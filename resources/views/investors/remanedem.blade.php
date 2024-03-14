@@ -14,9 +14,7 @@
                                     <div class="alert alert-success">{{session('status')}}</div>
                                 @endif
                                 <h4 class="my-2">
-                                    Punta, Carles - Clients
-                                    <a href="{{route('dashboard')}}" class="btn btn-primary float-end my-1 me-1 btn-sm">Back</a>
-                                    <a href="{{route('AddPuntaClient')}}" class="btn btn-success float-end mx-1 my-1 btn-sm">Add</a>
+                                    Gigante Sur, Carles - Clients
                                 </h4>
                             </div>
                             <div class="card-body">

@@ -21,11 +21,11 @@ class DashboardController extends Controller
                 'islasurdata' => $islasurdata,
                 'deduction' => 1500,
                 'january' => count($fromjanuarycustomer)*200,
-                'januarynumberofclients' => $count($fromjanuarycustomer),
+                'januarynumberofclients' => count($fromjanuarycustomer),
                 'febuary' => count($fromfebuarycustomer)*200,
-                'febuarynumberofclients' => $count($fromfebuarycustomer),
+                'febuarynumberofclients' => count($fromfebuarycustomer),
                 'march' => count($frommarchcustomer)*200,
-                'marchnumberofclients' => $count($frommarchcustomer),
+                'marchnumberofclients' => count($frommarchcustomer),
             ]);
         }
     }

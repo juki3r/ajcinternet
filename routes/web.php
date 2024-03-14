@@ -4,6 +4,7 @@ use App\Http\Controllers\Clients;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PuntaController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LuyoPoblacionController;
 
 /*
@@ -46,9 +47,7 @@ Route::middleware(['auth', 'verified'])->group(function() {
 
 
 });
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

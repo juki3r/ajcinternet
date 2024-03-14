@@ -73,8 +73,8 @@
                                             <td><strong>&#8369; {{ $deduction }}.00</strong></td>
                                         </tr>
                                         <tr>
-                                            <td class="bg-primary">Payable by admin</td>
-                                            <td ><strong>&#8369; {{ $january - $deduction }}.00</strong></td>
+                                            <td class="bg-primary text-light">Payable by admin</td>
+                                            <td class="bg-primary text-light"><strong>&#8369; {{ $january - $deduction }}.00</strong></td>
                                         </tr>
                                     </table> 
                                 </div>
@@ -105,8 +105,8 @@
                                             <td><strong>&#8369; {{ $deduction }}.00</strong></td>
                                         </tr>
                                         <tr>
-                                            <td class="bg-primary">Payable by admin</td>
-                                            <td ><strong>&#8369; {{ $febuary - $deduction }}.00</strong></td>
+                                            <td class="bg-primary text-light">Payable by admin</td>
+                                            <td class="bg-primary text-light"><strong>&#8369; {{ $febuary - $deduction }}.00</strong></td>
                                         </tr>
                                     </table> 
                                 </div>

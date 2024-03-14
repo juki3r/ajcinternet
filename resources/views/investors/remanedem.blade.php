@@ -45,12 +45,12 @@
             </div>
         </div>
 
-        <div class="py-12">
+        <div class="py-4">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900">
+                        {{-- January --}}
                         <div class="col-12 col-lg-6">
-                            {{-- January --}}
                             <div class="card">
                                 <div class="card-header">
                                     <h1>January</h1>
@@ -64,6 +64,25 @@
                                     </p>
                                     <p>
                                         Payable by admin : &#8369; {{ $january - $deduction }}.00
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- Febuary --}}
+                        <div class="col-12 col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h1>Febuary</h1>
+                                </div>
+                                <div class="card-body">
+                                    <p>
+                                        Total Income : &#8369; {{ $febuary }}.00
+                                    </p>
+                                    <p>
+                                        Deduction : &#8369; {{ $deduction }}.00
+                                    </p>
+                                    <p>
+                                        Payable by admin : &#8369; {{ $febuary - $deduction }}.00
                                     </p>
                                 </div>
                             </div>

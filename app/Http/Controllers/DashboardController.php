@@ -26,6 +26,6 @@ class DashboardController extends Controller
 
         // return view('investores.remanedem')
 
-        echo count($fromjanuarycustomer);
+        echo count($fromjanuarycustomer)*3;
     }
 }

@@ -10,7 +10,9 @@ class DashboardController extends Controller
     public function dashboard ()
     {
         if(Auth::user()->name == 'Reman Edem'){
-            return view('investors.remanedem');
+
+            $islasurdata = IslaSur::get();
+            return view('investors.remanedem', ['islasurdata' => $islasurdata]);
         }
     }
 }

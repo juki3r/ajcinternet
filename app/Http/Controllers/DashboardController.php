@@ -22,6 +22,6 @@ class DashboardController extends Controller
         $remanplan = IslaSur::get('plan');
         // return view('investores.remanedem')
 
-        echo $remanplan;
+        echo count($remanplan);
     }
 }

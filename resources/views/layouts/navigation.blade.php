@@ -19,13 +19,7 @@
                 @if(Auth::user()->usertype==='user')
                     {{-- Code Here for user --}}
                     
-                    @if(Auth::user()->name == 'Reman Edem')
-                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                        <x-nav-link :href="route('remanearning')" :active="request()->routeIs('remanearning')">
-                            {{ __('Status') }}
-                        </x-nav-link>
-                    </div>
-                    @endif
+                   
                 @else
                 <!--Admin-->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
@@ -93,11 +87,7 @@
             @if(Auth::user()->usertype==='user')
             {{-- Code Here for user --}}
 
-            @if(Auth::user()->name == 'Reman Edem')
-                <x-responsive-nav-link  :href="route('remanearning')" :active="request()->routeIs('remanearning')">
-                    {{ __('Status') }}
-                </x-responsive-nav-link >
-            @endif
+           
         @else
         <!--Admin-->
             <x-responsive-nav-link :href="route('punta')" :active="request()->routeIs('punta')">

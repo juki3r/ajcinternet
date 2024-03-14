@@ -9,24 +9,7 @@
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900">
                        <div class="row">
-                        <div class="col-12 col-lg-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h1>January</h1>
-                                </div>
-                                <div class="card-body">
-                                    <p>
-                                        Total Income : &#8369; {{ $january }}.00
-                                    </p>
-                                    <p>
-                                        Deduction : &#8369; {{ $deduction }}.00
-                                    </p>
-                                    <p>
-                                        Payable by admin : &#8369; {{ $january - $deduction }}.00
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="col-12 col-lg-6"></div>
                        </div>
                     </div>

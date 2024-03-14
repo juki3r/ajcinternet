@@ -45,8 +45,7 @@ Route::middleware(['auth', 'verified'])->group(function() {
     Route::get('luyo/editbillluyoclient/{id}', [LuyoPoblacionController::class, 'EditBillClient'])->name('EditBillClientLuyo');
     Route::put('luyo/updatebillclient/{id}', [LuyoPoblacionController::class, 'updatebill']);
 
-    //Reman Edem
-    Route::get('remanedem/status', [DashboardController::class, 'remanearning'])->name('remanearning');
+   
 
 
 });

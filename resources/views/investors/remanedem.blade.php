@@ -50,8 +50,8 @@
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900">
                         {{-- January --}}
-                        <div class="col-12 col-lg-6">
-                            <div class="card">
+                        <div class="col-12 col-lg-6 my-2">
+                            <div class="card shadow">
                                 <div class="card-header">
                                     <h1>January</h1>
                                 </div>
@@ -69,8 +69,8 @@
                             </div>
                         </div>
                         {{-- Febuary --}}
-                        <div class="col-12 col-lg-6">
-                            <div class="card">
+                        <div class="col-12 col-lg-6 my-2">
+                            <div class="card shadow">
                                 <div class="card-header">
                                     <h1>Febuary</h1>
                                 </div>

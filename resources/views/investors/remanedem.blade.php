@@ -58,17 +58,17 @@
                                 </div>
                                 <div class="card-body">
                                     <p>
-                                        Number of clients : {{ $januarynumberofclients }}
+                                        Number of clients : <strong>{{ $januarynumberofclients }}</strong>
                                     </p>
-                                        Income per client : &#8369; 200.00
+                                        Income per client : <strong>&#8369; 200.00</strong>
                                     <p>
-                                        Total Income : &#8369; {{ $january }}.00
-                                    </p>
-                                    <p>
-                                        Deduction : &#8369; {{ $deduction }}.00
+                                        Total Income : <strong>&#8369; {{ $january }}.00</strong>
                                     </p>
                                     <p>
-                                        Payable by admin : &#8369; {{ $january - $deduction }}.00
+                                        Deduction : <strong>&#8369; {{ $deduction }}.00</strong>
+                                    </p>
+                                    <p>
+                                        Payable by admin : <strong>&#8369; {{ $january - $deduction }}.00</strong>
                                     </p>
                                 </div>
                             </div>
@@ -81,18 +81,18 @@
                                 </div>
                                 <div class="card-body">
                                     <p>
-                                        Number of clients : {{ $febuarynumberofclients }}
+                                        Number of clients : <strong>{{ $febuarynumberofclients }}</strong>
                                     </p>
-                                        Income per client : &#8369; 200.00
+                                        Income per client : <strong>&#8369; 200.00</strong>
                                     <p>
                                     <p>
-                                        Total Income : &#8369; {{ $febuary }}.00
-                                    </p>
-                                    <p>
-                                        Deduction : &#8369; {{ $deduction }}.00
+                                        Total Income : <strong>&#8369; {{ $febuary }}.00</strong>
                                     </p>
                                     <p>
-                                        Payable by admin : &#8369; {{ $febuary - $deduction }}.00
+                                        Deduction : <strong>&#8369; {{ $deduction }}.00</strong>
+                                    </p>
+                                    <p>
+                                        Payable by admin : <strong>&#8369; {{ $febuary - $deduction }}.00</strong>
                                     </p>
                                 </div>
                             </div>

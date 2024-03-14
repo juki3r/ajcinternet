@@ -58,6 +58,10 @@
                                 </div>
                                 <div class="card-body">
                                     <p>
+                                        Number of clients : {{ $januarynumberofclients }}
+                                    </p>
+                                        Income per client : &#8369; 200.00
+                                    <p>
                                         Total Income : &#8369; {{ $january }}.00
                                     </p>
                                     <p>
@@ -76,6 +80,11 @@
                                     <h1>Febuary</h1>
                                 </div>
                                 <div class="card-body">
+                                    <p>
+                                        Number of clients : {{ $febuarynumberofclients }}
+                                    </p>
+                                        Income per client : &#8369; 200.00
+                                    <p>
                                     <p>
                                         Total Income : &#8369; {{ $febuary }}.00
                                     </p>

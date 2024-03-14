@@ -57,19 +57,28 @@
                                     <h1>January</h1>
                                 </div>
                                 <div class="card-body">
-                                    <p>
-                                        Number of clients : <strong>{{ $januarynumberofclients }}</strong>
-                                    </p>
-                                        Income per client : <strong>&#8369; 200.00</strong>
-                                    <p>
-                                        Total Income : <strong>&#8369; {{ $january }}.00</strong>
-                                    </p>
-                                    <p>
-                                        Deduction : <strong>&#8369; {{ $deduction }}.00</strong>
-                                    </p>
-                                    <p>
-                                        Payable by admin : <strong>&#8369; {{ $january - $deduction }}.00</strong>
-                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td>Number of clients</td>
+                                            <td><strong>{{ $januarynumberofclients }}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Income per client</td>
+                                            <td><strong>&#8369; 200.00</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total Income</td>
+                                            <td><strong>&#8369; {{ $january }}.00</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Deduction</td>
+                                            <td><strong>&#8369; {{ $deduction }}.00</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Payable by admin</td>
+                                            <td><strong>&#8369; {{ $january - $deduction }}.00</strong></td>
+                                        </tr>
+                                    </table> 
                                 </div>
                             </div>
                         </div>
@@ -80,20 +89,28 @@
                                     <h1>Febuary</h1>
                                 </div>
                                 <div class="card-body">
-                                    <p>
-                                        Number of clients : <strong>{{ $febuarynumberofclients }}</strong>
-                                    </p>
-                                        Income per client : <strong>&#8369; 200.00</strong>
-                                    <p>
-                                    <p>
-                                        Total Income : <strong>&#8369; {{ $febuary }}.00</strong>
-                                    </p>
-                                    <p>
-                                        Deduction : <strong>&#8369; {{ $deduction }}.00</strong>
-                                    </p>
-                                    <p>
-                                        Payable by admin : <strong>&#8369; {{ $febuary - $deduction }}.00</strong>
-                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td>Number of clients</td>
+                                            <td><strong>{{ $febuarynumberofclients }}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Income per client</td>
+                                            <td><strong>&#8369; 200.00</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total Income</td>
+                                            <td><strong>&#8369; {{ $febuary }}.00</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Deduction</td>
+                                            <td><strong>&#8369; {{ $deduction }}.00</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Payable by admin</td>
+                                            <td><strong>&#8369; {{ $febuary - $deduction }}.00</strong></td>
+                                        </tr>
+                                    </table> 
                                 </div>
                             </div>
                         </div>

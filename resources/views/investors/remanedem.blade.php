@@ -24,7 +24,6 @@
                                             <tr>
                                                 <th>Name</th>
                                                 <th>Address</th>
-                                                <th>Plan</th>
                                             </tr>
                                         </thead>
                                         <tbody >
@@ -32,7 +31,6 @@
                                                 <tr>
                                                 <td>{{ $islasurdata->name }}</td>
                                                 <td>{{ $islasurdata->address }}</td>
-                                                <td>{{ $islasurdata->plan }}</td>
                                                 </tr>
                                             @endforeach
                                         </tbody>

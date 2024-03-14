@@ -21,8 +21,11 @@ class DashboardController extends Controller
     {
         $fromjanuarycustomer = IslaSur::where('january', 'like', 'yes')->get();
         $fromfebuarycustomer = IslaSur::where('febuary', 'like', 'yes')->get();
+        $frommarchcustomer = IslaSur::where('march', 'like', 'yes')->get();
+
+
         // return view('investores.remanedem')
 
-        echo count($fromfebuarycustomer);
+        echo count($fromjanuarycustomer);
     }
 }
